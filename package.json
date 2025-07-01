@@ -1,52 +1,36 @@
 {
-    "devDependencies": {
-        "@biomejs/biome": "1.8.3",
-        "@types/amqplib": "^0.10.5",
-        "@types/better-sqlite3": "^7.6.11",
-        "@types/bun": "^1.1.11",
-        "@types/express": "^4.17.21",
-        "@types/lodash": "^4.17.12",
-        "@types/node": "^22.7.7",
-        "@types/uuid": "^10.0.0",
-        "drizzle-kit": "^0.24.2",
-        "tsx": "^4.19.1",
-        "typescript": "^5.6.3"
-    },
-    "name": "skeet-discord-bot",
-    "description": "Posts your bluesky skeets to Discord",
-    "version": "1.0.0",
-    "main": "src/main.ts",
-    "type": "module",
-    "scripts": {
-        "start": "tsx src/main.ts",
-        "dev": "bun run start | pino-pretty",
-        "start:listener": "tsx src/scripts/listener.ts | pino-pretty",
-        "gen-lex": "tsx src/scripts/gen-lexicon.ts",
-        "check": "tsc --noEmit",
-        "format": "biome format --write ./src",
-        "lint": "biome lint --write ./src"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@atproto/api": "^0.13.12",
-        "@atproto/identity": "^0.4.2",
-        "@atproto/lex-cli": "^0.5.1",
-        "@atproto/repo": "^0.4.3",
-        "@atproto/xrpc-server": "^0.4.4",
-        "amqplib": "^0.10.4",
-        "dotenv": "^16.4.5",
-        "glob": "^11.0.0",
-        "lodash": "^4.17.21",
-        "lru-cache": "^11.0.1",
-        "multiformats": "^13.3.0",
-        "pino": "^9.5.0",
-        "pino-pretty": "^11.3.0",
-        "type-fest": "^4.26.1",
-        "uuid": "^10.0.0",
-        "zod": "^3.23.8"
-    },
-    "volta": {
-        "node": "22.7.0"
-    }
+	"devDependencies": {
+		"@biomejs/biome": "2.0.6",
+		"@types/amqplib": "^0.10.7",
+		"@types/bun": "^1.2.17",
+		"@types/lodash": "^4.17.19",
+		"@types/node": "^22.15.34",
+		"pino-pretty": "^13.0.0",
+		"typescript": "^5.8.3"
+	},
+	"name": "skeet-discord-bot",
+	"description": "Posts your bluesky skeets to Discord",
+	"version": "1.0.0",
+	"main": "src/main.ts",
+	"type": "module",
+	"scripts": {
+		"start": "bun src/main.ts",
+		"dev": "bun run start | pino-pretty",
+		"check": "tsc --noEmit",
+		"tidy": "biome check --write ./src"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@atcute/jetstream": "^1.0.2",
+		"@atproto/api": "^0.15.19",
+		"amqplib": "^0.10.8",
+		"dotenv": "^17.0.0",
+		"lodash": "^4.17.21",
+		"pino": "^9.7.0",
+		"zod": "^3.25.67"
+	},
+	"volta": {
+		"node": "22.7.0"
+	}
 }
